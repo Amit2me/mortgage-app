@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.ing.assessment</groupId>
     <artifactId>mortgage-app</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>mortgage-app</name>
     <description>mortgage-app</description>
     <url/>
