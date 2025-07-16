@@ -8,6 +8,7 @@ import com.ing.assessment.mortgage.dto.MortgageCheckResponse;
 import com.ing.assessment.mortgage.service.MortgageService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -31,7 +32,10 @@ public class MortgageController {
      *
      * @return list of interest rates, one per supported maturity period
      */
-    @GetMapping("/interest-rates")
+    @GetMapping(
+            value = "/interest-rates",
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     public ResponseEntity<List<InterestRateResponse>> getInterestRates() {
         return ResponseEntity.ok(InterestRateMapper.toForamttedList(interestRates));
     }
@@ -42,7 +46,11 @@ public class MortgageController {
      * @param request validated mortgage check request DTO
      * @return mortgage feasibility and monthly cost
      */
-    @PostMapping("/mortgage-check")
+    @PostMapping(
+            value = "/mortgage-check",
+            consumes = MediaType.APPLICATION_JSON_VALUE,
+            produces = MediaType.APPLICATION_JSON_VALUE
+    )
     public ResponseEntity<MortgageCheckResponse> checkMortgage(
             @Valid @RequestBody MortgageCheckRequest request) {
         MortgageCheckResponse response = mortgageService.checkMortgage(request);
