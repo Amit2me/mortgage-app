@@ -1,4 +1,4 @@
-package com.ing.assessment.mortgage.model;
+package com.ing.assessment.mortgage.dto;
 
 import java.math.BigDecimal;
 

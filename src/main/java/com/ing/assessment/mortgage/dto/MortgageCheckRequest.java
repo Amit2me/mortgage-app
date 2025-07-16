@@ -1,9 +1,7 @@
-package com.ing.assessment.mortgage.model;
+package com.ing.assessment.mortgage.dto;
 
-import jakarta.validation.constraints.DecimalMin;
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Past;
+import jakarta.validation.constraints.*;
+
 import java.math.BigDecimal;
 import java.time.LocalDate;
 
@@ -27,7 +25,12 @@ public record MortgageCheckRequest(
 
         String firstName,
         String lastName,
-
-        @Past LocalDate dateOfBirth,
+        @Past(message = "Date of birth must be in the past and after 1900-01-01")
+        LocalDate dateOfBirth,
         Gender gender
-) {}
+) {
+    @AssertTrue(message = "Date of birth must not be before 1900-01-01")
+    public boolean isDateOfBirthAfter1900() {
+        return dateOfBirth == null || !dateOfBirth.isBefore(LocalDate.of(1900, 1, 1));
+    }
+}
