@@ -2,7 +2,7 @@ interest:
   rates:
     # 1 year fixed
     - maturityPeriod: 1
-      interestRate: 0.0300
+      interestRate: 0.0000
       lastUpdate: 2025-07-01T10:00:00Z
 
     # 2–5 year bucket

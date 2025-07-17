@@ -11,16 +11,16 @@ import java.time.LocalDate;
  * Personal fields are optional.
  */
 public record MortgageCheckRequest(
-        @NotNull @DecimalMin(value = "0", inclusive = false, message = "Income must be greater than 0")
+        @NotNull @DecimalMin(value = "1",  message = "Income must be greater than 0")
         BigDecimal income,
 
-        @NotNull @Positive(message = "Maturity period must be greater than 0")
+        @NotNull @Min(1) @Max(40) @Positive(message = "Maturity period must be greater than 0")
         Integer maturityPeriod,
 
-        @NotNull @DecimalMin(value = "0", inclusive = false, message = "Loan value must be greater than 0")
+        @NotNull @DecimalMin(value = "1",  message = "Loan value must be greater than 0")
         BigDecimal loanValue,
 
-        @NotNull @DecimalMin(value = "0", inclusive = false, message = "Home value must be greater than 0")
+        @NotNull @DecimalMin(value = "1",  message = "Home value must be greater than 0")
         BigDecimal homeValue,
 
         String firstName,

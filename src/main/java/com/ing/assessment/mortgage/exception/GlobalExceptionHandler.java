@@ -1,6 +1,7 @@
 package com.ing.assessment.mortgage.exception;
 
-import com.ing.assessment.mortgage.dto.ApiErrorResponse;
+import com.ing.assessment.mortgage.dto.error.ApiErrorResponse;
+import com.ing.assessment.mortgage.dto.error.NotFoundErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.ConstraintViolationException;
 import lombok.extern.slf4j.Slf4j;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.MissingServletRequestParameterException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.servlet.resource.NoResourceFoundException;
 
 import java.time.Instant;
 import java.util.List;
@@ -103,6 +105,24 @@ public class GlobalExceptionHandler {
         );
         log.info("Missing request parameter at {}: {} ({})", request.getRequestURI(), ex.getMessage(), ex.getClass().getSimpleName());
         return ResponseEntity.badRequest().body(response);
+    }
+
+    /**
+     * Handles cases where the requested resource is not found.
+     */
+    @ExceptionHandler(NoResourceFoundException.class)
+    public ResponseEntity<NotFoundErrorResponse> handleNoResourceFound(
+            NoResourceFoundException ex, HttpServletRequest request) {
+        log.warn("Resource not found: {} at {}", ex.getMessage(), request.getRequestURI());
+
+        NotFoundErrorResponse response = new NotFoundErrorResponse(
+                Instant.now(),
+                HttpStatus.NOT_FOUND.value(),
+                "Not Found",
+                ex.getMessage(),
+                request.getRequestURI()
+        );
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(response);
     }
 
     /**
