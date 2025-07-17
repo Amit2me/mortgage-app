@@ -67,7 +67,7 @@ public class MortgageController {
             produces = MediaType.APPLICATION_JSON_VALUE
     )
     public ResponseEntity<List<InterestRateResponse>> getInterestRates() {
-        return ResponseEntity.ok(InterestRateMapper.toForamttedList(interestRates));
+        return ResponseEntity.ok(InterestRateMapper.toFormattedList(interestRates));
     }
 
     /**

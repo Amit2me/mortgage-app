@@ -21,7 +21,7 @@ public final class InterestRateMapper {
         );
     }
 
-    public static List<InterestRateResponse> toForamttedList(List<InterestRate> rates) {
+    public static List<InterestRateResponse> toFormattedList(List<InterestRate> rates) {
         return rates.stream().map(InterestRateMapper::toDto).toList();
     }
 }
