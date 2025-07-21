@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: mortgage-app
+  config:
+    import: classpath:interest-rates.yml
+  jackson:
+    deserialization:
+      ACCEPT_FLOAT_AS_INT: false
+
