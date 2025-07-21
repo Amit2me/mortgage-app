@@ -8,14 +8,14 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>3.5.3</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <relativePath/>
     </parent>
 
     <groupId>com.ing.assessment</groupId>
     <artifactId>mortgage-app</artifactId>
     <version>1.0.1</version>
     <name>Mortgage App</name>
-    <description>Production-grade Spring Boot 3.5.3 Mortgage API - Coding Assessment</description>
+    <description>Production-grade Mortgage API</description>
     <url>https://github.com/Amit2me/mortgage-app</url>
     <developers>
         <developer>
