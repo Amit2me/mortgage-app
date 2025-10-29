@@ -1,0 +1,133 @@
+interest:
+  rates:
+    # 1 year fixed
+    - maturityPeriod: 1
+      interestRate: 0.0000
+      lastUpdate: 2025-07-01T10:00:00Z
+
+    # 2–5 year bucket
+    - maturityPeriod: 2
+      interestRate: 0.0325
+      lastUpdate: 2025-06-20T10:00:00Z
+    - maturityPeriod: 3
+      interestRate: 0.0325
+      lastUpdate: 2025-06-20T10:00:00Z
+    - maturityPeriod: 4
+      interestRate: 0.0325
+      lastUpdate: 2025-06-20T10:00:00Z
+    - maturityPeriod: 5
+      interestRate: 0.0325
+      lastUpdate: 2025-06-20T10:00:00Z
+
+    # 6–10 year bucket
+    - maturityPeriod: 6
+      interestRate: 0.0340
+      lastUpdate: 2025-06-15T10:00:00Z
+    - maturityPeriod: 7
+      interestRate: 0.0340
+      lastUpdate: 2025-06-15T10:00:00Z
+    - maturityPeriod: 8
+      interestRate: 0.0340
+      lastUpdate: 2025-06-15T10:00:00Z
+    - maturityPeriod: 9
+      interestRate: 0.0340
+      lastUpdate: 2025-06-15T10:00:00Z
+    - maturityPeriod: 10
+      interestRate: 0.0340
+      lastUpdate: 2025-06-15T10:00:00Z
+
+    # 11–20 year bucket
+    - maturityPeriod: 11
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 12
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 13
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 14
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 15
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 16
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 17
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 18
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 19
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+    - maturityPeriod: 20
+      interestRate: 0.0370
+      lastUpdate: 2025-06-01T10:00:00Z
+
+    # 21–30 year bucket
+    - maturityPeriod: 21
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 22
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 23
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 24
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 25
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 26
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 27
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 28
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 29
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+    - maturityPeriod: 30
+      interestRate: 0.0400
+      lastUpdate: 2025-05-20T10:00:00Z
+
+    # 31–40 year bucket
+    - maturityPeriod: 31
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 32
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 33
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 34
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 35
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 36
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 37
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 38
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 39
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
+    - maturityPeriod: 40
+      interestRate: 0.0450
+      lastUpdate: 2025-05-01T10:00:00Z
